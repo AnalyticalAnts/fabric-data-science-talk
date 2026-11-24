@@ -23,10 +23,12 @@ series on analyticalants.com.
 
 | Folder       | Contents                                                                                     |
 | ------------ | -------------------------------------------------------------------------------------------- |
-| `slides/`    | The talk deck (PDF). *Coming soon, after cleanup.*                                           |
+| `slides/`    | `financial-modeling-in-microsoft-fabric.pdf`: the talk deck, with links to the Microsoft Learn paths it cites |
 | `dataflow/`  | `dataflow-gen2-queries.pq`: the Power Query (M) for every silver table                       |
 | `notebooks/` | `2_Notebook_Engineering.ipynb`: Spark SQL joins, anomaly flags, the gold write, Data Wrangler |
-| `powerbi/`   | The report: three financial statements, their ratios and a valuation page. *Coming soon.*    |
+
+The Power BI report will be added after it is cleaned in Power BI Desktop. It
+is not in this repository yet.
 
 All data is synthetic. The general ledger and budget come from the public
 [Randomized Retail GL Generator](https://github.com/AnalyticalAnts/Randomized-Retail-GL-Generator);
@@ -48,10 +50,10 @@ saved notebook outputs have been removed.
    to the `FinancialModeling` lakehouse and run it. It writes
    `GeneralLedger_Gold`.
 5. Create a **data pipeline** that runs the dataflow, then the notebook.
-6. Open the Power BI file in Power BI Desktop and point it at your own
-   lakehouse's semantic model (or rebuild the model on your gold and silver
-   tables). XMLA read-write must be enabled on the capacity to edit a Direct
-   Lake model from external tools.
+6. Build a Direct Lake semantic model on your gold and silver tables and
+   report on it in Power BI. (The talk's Power BI report isn't included yet;
+   see above.) XMLA read-write must be enabled on the capacity to edit a
+   Direct Lake model from external tools.
 
 ## The series
 
@@ -68,7 +70,15 @@ Tell us about your project at https://analyticalants.com/contact.
 
 ## License
 
-<!-- OWNER DECISION: suggested MIT for code (M, notebook) and CC BY 4.0 for the
-slides and report. Replace this block with the chosen LICENSE before publishing. -->
+This repository uses two licences:
+
+- **Code** (the Power Query M in `dataflow/` and the notebook in `notebooks/`)
+  is under the [MIT License](LICENSE).
+- **The slide deck** in `slides/` is under
+  [Creative Commons Attribution 4.0 International (CC BY 4.0)](slides/LICENSE).
+  You may share and adapt it, including commercially, if you credit
+  "Financial Modeling in Microsoft Fabric" by Analytical Ants LLC and link to
+  the licence. Microsoft product names and logos in the deck are Microsoft
+  trademarks and aren't covered by that licence.
 
 Copyright © 2023–2026 Analytical Ants LLC.

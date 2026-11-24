@@ -106,7 +106,6 @@ in
 --------------------------
 --Competitors_Silver
 
-// Removed from the public copy pending owner review: the original query embedded
-// comparable-company figures and Crunchbase links for real listed companies.
+// Comparable-company data is not included in this repository.
 // Add your own comparables table here (columns: Company, Stock Sym, Market Cap,
 // Enterprise Value, Revenue, EBITDA, Net Income, Total Cash, Total Debt).
